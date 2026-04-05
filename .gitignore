@@ -1,3 +1,7 @@
+# Dataset — autograder has its own copy
+oxford-pet/
+data/oxford-pet/
+
 # Model checkpoints
 checkpoints/*.pth
 *.pth
