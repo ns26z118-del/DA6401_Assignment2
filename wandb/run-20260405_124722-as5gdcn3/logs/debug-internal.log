@@ -1,0 +1,7 @@
+{"time":"2026-04-05T12:47:22.4061768+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260405_124722-as5gdcn3\\logs\\debug-core.log"}
+{"time":"2026-04-05T12:47:22.8955653+05:30","level":"INFO","msg":"stream: created new stream","id":"as5gdcn3"}
+{"time":"2026-04-05T12:47:22.8955653+05:30","level":"INFO","msg":"stream: started","id":"as5gdcn3"}
+{"time":"2026-04-05T12:47:22.8955653+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"as5gdcn3"}
+{"time":"2026-04-05T12:47:22.8955653+05:30","level":"INFO","msg":"handler: started","stream_id":"as5gdcn3"}
+{"time":"2026-04-05T12:47:22.8955653+05:30","level":"INFO","msg":"sender: started","stream_id":"as5gdcn3"}
+{"time":"2026-04-05T12:47:23.4964574+05:30","level":"INFO","msg":"Starting system monitor"}

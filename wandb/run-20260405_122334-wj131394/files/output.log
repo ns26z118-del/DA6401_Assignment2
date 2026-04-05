@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\IITM\DA6401\DA6401_Assignment2\train.py", line 219, in <module>
+    train_classifier(args)
+  File "D:\IITM\DA6401\DA6401_Assignment2\train.py", line 54, in train_classifier
+    train_ds = OxfordIIITPetDataset(args.data_root, split="train", transform=get_transforms("train"))
+  File "D:\IITM\DA6401\DA6401_Assignment2\data\pets_dataset.py", line 63, in __init__
+    with open(list_file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '\\path\\to\\oxford-pet\\annotations\\list.txt'

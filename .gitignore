@@ -1,0 +1,8 @@
+# Model checkpoints
+checkpoints/*.pth
+*.pth
+
+# Python
+__pycache__/
+*.pyc
+.env
