@@ -38,6 +38,9 @@ class MultiTaskPerceptionModel(nn.Module):
         self.localizer.load_state_dict(torch.load(localizer_path, map_location="cpu"))
         self.segmenter.load_state_dict(torch.load(unet_path, map_location="cpu"))
 
+        # 🔥 IMPORTANT FIX (add this line)
+        self.segmenter.load_encoder_weights(classifier_path)
+
         # optional but safe
         self.eval()
 
@@ -51,7 +54,9 @@ class MultiTaskPerceptionModel(nn.Module):
             cls_logits = self.classifier(x)
 
             boxes = self.localizer(x)
-            boxes[:, 2:] = torch.abs(boxes[:, 2:])  # 🔥 critical fix
+
+            # 🔥 REAL FIX
+            boxes = boxes / 224.0
 
             seg_logits = self.segmenter(x)
 
@@ -60,6 +65,26 @@ class MultiTaskPerceptionModel(nn.Module):
             "localization": boxes,
             "segmentation": seg_logits
         }
+    
+    # def forward(self, x):
+
+    #     self.classifier.eval()
+    #     self.localizer.eval()
+    #     self.segmenter.eval()
+
+    #     with torch.no_grad():
+    #         cls_logits = self.classifier(x)
+
+    #         boxes = self.localizer(x)
+    #         boxes[:, 2:] = torch.abs(boxes[:, 2:])  # 🔥 critical fix
+
+    #         seg_logits = self.segmenter(x)
+
+    #     return {
+    #         "classification": cls_logits,
+    #         "localization": boxes,
+    #         "segmentation": seg_logits
+    #     }
 
     # def forward(self, x: torch.Tensor):
 
