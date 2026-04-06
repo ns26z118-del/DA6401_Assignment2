@@ -41,17 +41,37 @@ class MultiTaskPerceptionModel(nn.Module):
         # optional but safe
         self.eval()
 
-    def forward(self, x: torch.Tensor):
+    def forward(self, x):
 
-        cls_logits = self.classifier(x)     # [B, num_breeds]
-        boxes = self.localizer(x)           # [B, 4]
-        seg_logits = self.segmenter(x)      # [B, seg_classes, H, W]
+        self.classifier.eval()
+        self.localizer.eval()
+        self.segmenter.eval()
+
+        with torch.no_grad():
+            cls_logits = self.classifier(x)
+
+            boxes = self.localizer(x)
+            boxes[:, 2:] = torch.abs(boxes[:, 2:])  # 🔥 critical fix
+
+            seg_logits = self.segmenter(x)
 
         return {
             "classification": cls_logits,
             "localization": boxes,
             "segmentation": seg_logits
         }
+
+    # def forward(self, x: torch.Tensor):
+
+    #     cls_logits = self.classifier(x)     # [B, num_breeds]
+    #     boxes = self.localizer(x)           # [B, 4]
+    #     seg_logits = self.segmenter(x)      # [B, seg_classes, H, W]
+
+    #     return {
+    #         "classification": cls_logits,
+    #         "localization": boxes,
+    #         "segmentation": seg_logits
+    #     }
 
 # """Unified multi-task model
 # """
