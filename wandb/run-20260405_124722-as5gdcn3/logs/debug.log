@@ -19,3 +19,4 @@ config: {'task': 'classification', 'data_root': './oxford-pet', 'epochs': 30, 'b
 2026-04-05 12:47:23,656 INFO    MainThread:25396 [wandb_run.py:_redirect():2370] Wrapping output streams.
 2026-04-05 12:47:23,656 INFO    MainThread:25396 [wandb_run.py:_redirect():2393] Redirects installed.
 2026-04-05 12:47:23,658 INFO    MainThread:25396 [wandb_init.py:init():1078] run started, returning control to user process
+2026-04-05 20:36:39,279 INFO    MsgRouterThr:25396 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

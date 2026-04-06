@@ -1,0 +1,7 @@
+{"time":"2026-04-05T20:36:54.6893664+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260405_203654-q1yf6qdd\\logs\\debug-core.log"}
+{"time":"2026-04-05T20:36:55.1936355+05:30","level":"INFO","msg":"stream: created new stream","id":"q1yf6qdd"}
+{"time":"2026-04-05T20:36:55.1936355+05:30","level":"INFO","msg":"sender: started","stream_id":"q1yf6qdd"}
+{"time":"2026-04-05T20:36:55.1941983+05:30","level":"INFO","msg":"stream: started","id":"q1yf6qdd"}
+{"time":"2026-04-05T20:36:55.1941983+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"q1yf6qdd"}
+{"time":"2026-04-05T20:36:55.1941983+05:30","level":"INFO","msg":"handler: started","stream_id":"q1yf6qdd"}
+{"time":"2026-04-05T20:36:55.69257+05:30","level":"INFO","msg":"Starting system monitor"}

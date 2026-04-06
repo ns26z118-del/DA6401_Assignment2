@@ -1,0 +1,15 @@
+D:\IITM\DA6401\DA6401_Assignment2\models\localization.py:70: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(classifier_path, map_location="cpu")
+Loaded encoder weights from checkpoints/classifier.pth
+Epoch 001 | Train loss 9719.1539 | Val loss 5609.4346
+  ✓ Saved best model (val_loss=5609.4346)
+Epoch 002 | Train loss 2968.0063 | Val loss 3794.3183
+  ✓ Saved best model (val_loss=3794.3183)
+Epoch 003 | Train loss 2870.9893 | Val loss 2865.1841
+  ✓ Saved best model (val_loss=2865.1841)
+Epoch 004 | Train loss 2836.7429 | Val loss 2544.2765
+  ✓ Saved best model (val_loss=2544.2765)
+Epoch 005 | Train loss 2855.9393 | Val loss 2826.9601
+Epoch 006 | Train loss 2815.1682 | Val loss 2983.6653
+Epoch 007 | Train loss 2810.8062 | Val loss 2815.5948
+Epoch 008 | Train loss 2812.5301 | Val loss 2832.0100
