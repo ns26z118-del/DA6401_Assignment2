@@ -62,6 +62,8 @@ class MultiTaskPerceptionModel(nn.Module):
             boxes[:, 3] = torch.clamp(boxes[:, 3], 1, 224)
 
             seg_logits = self.segmenter(x)
+        
+        print("DEBUG BOX:", boxes[0])
 
         return {
             "classification": cls_logits,
