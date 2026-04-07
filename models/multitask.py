@@ -51,8 +51,9 @@ class MultiTaskPerceptionModel(nn.Module):
         with torch.no_grad():
             cls_logits = self.classifier(x)
 
-            boxes = self.localizer(x)
-            boxes[:, 2:] = torch.abs(boxes[:, 2:])  # 🔥 critical fix
+            boxes = self.localizer(x)              # [0,1] normalized
+            boxes = boxes * 224.0                  # scale to pixel space
+            boxes[:, 2:] = torch.abs(boxes[:, 2:])
 
             seg_logits = self.segmenter(x)
 

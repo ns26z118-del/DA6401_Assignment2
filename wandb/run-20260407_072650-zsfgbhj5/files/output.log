@@ -46,3 +46,4 @@ Epoch 033 | Train loss 0.5746 | Val loss 0.4996 | Val Dice 0.5726
 Epoch 034 | Train loss 0.5756 | Val loss 0.5016 | Val Dice 0.5731
 Epoch 035 | Train loss 0.5700 | Val loss 0.5006 | Val Dice 0.5720
 Epoch 036 | Train loss 0.5693 | Val loss 0.4942 | Val Dice 0.5784
+Epoch 037 | Train loss 0.5667 | Val loss 0.4979 | Val Dice 0.5784
