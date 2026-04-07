@@ -59,6 +59,7 @@ class VGG11Localizer(nn.Module):
             # Output: 4 values [cx, cy, w, h] in pixel space
             # No activation — raw linear output, pixel values are unbounded
             nn.Linear(1024, 4),
+            nn.Sigmoid(), 
         )
 
     def load_encoder_weights(self, classifier_path: str):

@@ -1,0 +1,49 @@
+D:\IITM\DA6401\DA6401_Assignment2\models\localization.py:71: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(classifier_path, map_location="cpu")
+Loaded encoder weights from checkpoints/classifier.pth
+Epoch 001 | Train loss 0.6276 | Val loss 0.0262
+  ✓ Saved best model (val_loss=0.0262)
+Epoch 002 | Train loss 0.5796 | Val loss 0.1035
+Epoch 003 | Train loss 0.5682 | Val loss 0.0331
+Epoch 004 | Train loss 0.5619 | Val loss 0.0161
+  ✓ Saved best model (val_loss=0.0161)
+Epoch 005 | Train loss 0.5577 | Val loss 0.0114
+  ✓ Saved best model (val_loss=0.0114)
+Epoch 006 | Train loss 0.5550 | Val loss 0.0112
+  ✓ Saved best model (val_loss=0.0112)
+Epoch 007 | Train loss 0.5525 | Val loss 0.0098
+  ✓ Saved best model (val_loss=0.0098)
+Epoch 008 | Train loss 0.5509 | Val loss 0.0069
+  ✓ Saved best model (val_loss=0.0069)
+Epoch 009 | Train loss 0.5499 | Val loss 0.0092
+Epoch 010 | Train loss 0.5490 | Val loss 0.0124
+Epoch 011 | Train loss 0.5485 | Val loss 0.0551
+Epoch 012 | Train loss 0.5486 | Val loss 0.0064
+  ✓ Saved best model (val_loss=0.0064)
+Epoch 013 | Train loss 0.5483 | Val loss 0.0076
+Epoch 014 | Train loss 0.5481 | Val loss 0.0072
+Epoch 015 | Train loss 0.5481 | Val loss 0.0052
+  ✓ Saved best model (val_loss=0.0052)
+Epoch 016 | Train loss 0.5480 | Val loss 0.0050
+  ✓ Saved best model (val_loss=0.0050)
+Epoch 017 | Train loss 0.5482 | Val loss 0.0065
+Epoch 018 | Train loss 0.5482 | Val loss 0.0063
+Epoch 019 | Train loss 0.5482 | Val loss 0.0063
+Epoch 020 | Train loss 0.5481 | Val loss 0.0061
+Epoch 021 | Train loss 0.5481 | Val loss 0.0056
+Epoch 022 | Train loss 0.5479 | Val loss 0.0055
+Epoch 023 | Train loss 0.5480 | Val loss 0.0049
+  ✓ Saved best model (val_loss=0.0049)
+Epoch 024 | Train loss 0.5478 | Val loss 0.0046
+  ✓ Saved best model (val_loss=0.0046)
+Epoch 025 | Train loss 0.5478 | Val loss 0.0045
+  ✓ Saved best model (val_loss=0.0045)
+Epoch 026 | Train loss 0.5478 | Val loss 0.0045
+Epoch 027 | Train loss 0.5478 | Val loss 0.0044
+  ✓ Saved best model (val_loss=0.0044)
+Epoch 028 | Train loss 0.5477 | Val loss 0.0044
+  ✓ Saved best model (val_loss=0.0044)
+Epoch 029 | Train loss 0.5477 | Val loss 0.0044
+  ✓ Saved best model (val_loss=0.0044)
+Epoch 030 | Train loss 0.5477 | Val loss 0.0044
+  ✓ Saved best model (val_loss=0.0044)

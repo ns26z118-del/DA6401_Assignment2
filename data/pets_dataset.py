@@ -97,10 +97,15 @@ class OxfordIIITPetDataset(Dataset):
 
         if not xml_path.exists():
             # Fallback: entire image is the bounding box
-            cx = self.target_size[1] / 2.0
-            cy = self.target_size[0] / 2.0
-            w  = float(self.target_size[1])
-            h  = float(self.target_size[0])
+            # cx = self.target_size[1] / 2.0
+            # cy = self.target_size[0] / 2.0
+            # w  = float(self.target_size[1])
+            # h  = float(self.target_size[0])
+            # return torch.tensor([cx, cy, w, h], dtype=torch.float32)
+            cx = 0.5  # center of image in [0,1]
+            cy = 0.5
+            w  = 1.0  # full width normalized
+            h  = 1.0  # full height normalized
             return torch.tensor([cx, cy, w, h], dtype=torch.float32)
 
         tree = ET.parse(xml_path)
@@ -127,6 +132,13 @@ class OxfordIIITPetDataset(Dataset):
         w  = xmax - xmin
         h  = ymax - ymin
 
+        # return torch.tensor([cx, cy, w, h], dtype=torch.float32)
+    
+        # In _load_bbox, change the return line to normalize:
+        cx = cx / self.target_size[1]
+        cy = cy / self.target_size[0]
+        w  = w  / self.target_size[1]
+        h  = h  / self.target_size[0]
         return torch.tensor([cx, cy, w, h], dtype=torch.float32)
 
     def __getitem__(self, idx: int) -> dict:
