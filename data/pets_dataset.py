@@ -23,7 +23,7 @@ Output masks:
 
 import os
 import xml.etree.ElementTree as ET
-from pathlib import Path
+from pathlib import Path    
 from typing import Callable, Optional, Tuple
 
 import numpy as np
@@ -86,27 +86,66 @@ class OxfordIIITPetDataset(Dataset):
         return len(self.entries)
 
     def _load_bbox(self, name: str, orig_w: int, orig_h: int) -> torch.Tensor:
-        """Load bounding box from PASCAL VOC XML.
-
-        Scales box coordinates from original image size to target_size,
-        then converts (x1,y1,x2,y2) → (cx,cy,w,h) in pixel space.
-
-        Falls back to the full image bounding box if the XML is missing.
-        """
         xml_path = self.root / "annotations" / "xmls" / f"{name}.xml"
 
         if not xml_path.exists():
-            # Fallback: entire image is the bounding box
-            # cx = self.target_size[1] / 2.0
-            # cy = self.target_size[0] / 2.0
-            # w  = float(self.target_size[1])
-            # h  = float(self.target_size[0])
-            # return torch.tensor([cx, cy, w, h], dtype=torch.float32)
-            cx = 0.5  # center of image in [0,1]
-            cy = 0.5
-            w  = 1.0  # full width normalized
-            h  = 1.0  # full height normalized
+            # ✅ FIXED: pixel space fallback
+            cx = self.target_size[1] / 2.0
+            cy = self.target_size[0] / 2.0
+            w  = float(self.target_size[1])
+            h  = float(self.target_size[0])
             return torch.tensor([cx, cy, w, h], dtype=torch.float32)
+
+        tree = ET.parse(xml_path)
+        root_elem = tree.getroot()
+        bndbox = root_elem.find(".//bndbox")
+
+        xmin = float(bndbox.find("xmin").text)
+        ymin = float(bndbox.find("ymin").text)
+        xmax = float(bndbox.find("xmax").text)
+        ymax = float(bndbox.find("ymax").text)
+
+        # Scale to 224
+        scale_x = self.target_size[1] / orig_w
+        scale_y = self.target_size[0] / orig_h
+
+        xmin *= scale_x
+        xmax *= scale_x
+        ymin *= scale_y
+        ymax *= scale_y
+
+        # Convert to (cx, cy, w, h)
+        cx = (xmin + xmax) / 2.0
+        cy = (ymin + ymax) / 2.0
+        w  = xmax - xmin
+        h  = ymax - ymin
+
+        # ✅ IMPORTANT: NO NORMALIZATION
+        return torch.tensor([cx, cy, w, h], dtype=torch.float32)
+    
+    
+    # def _load_bbox(self, name: str, orig_w: int, orig_h: int) -> torch.Tensor:
+    #     """Load bounding box from PASCAL VOC XML.
+
+    #     Scales box coordinates from original image size to target_size,
+    #     then converts (x1,y1,x2,y2) → (cx,cy,w,h) in pixel space.
+
+    #     Falls back to the full image bounding box if the XML is missing.
+    #     """
+    #     xml_path = self.root / "annotations" / "xmls" / f"{name}.xml"
+
+    #     if not xml_path.exists():
+    #         # Fallback: entire image is the bounding box
+    #         # cx = self.target_size[1] / 2.0
+    #         # cy = self.target_size[0] / 2.0
+    #         # w  = float(self.target_size[1])
+    #         # h  = float(self.target_size[0])
+    #         # return torch.tensor([cx, cy, w, h], dtype=torch.float32)
+    #         cx = 0.5  # center of image in [0,1]
+    #         cy = 0.5
+    #         w  = 1.0  # full width normalized
+    #         h  = 1.0  # full height normalized
+    #         return torch.tensor([cx, cy, w, h], dtype=torch.float32)
 
         tree = ET.parse(xml_path)
         root_elem = tree.getroot()
