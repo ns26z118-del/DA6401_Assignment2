@@ -47,3 +47,10 @@ Epoch 034 | Train loss 0.5756 | Val loss 0.5016 | Val Dice 0.5731
 Epoch 035 | Train loss 0.5700 | Val loss 0.5006 | Val Dice 0.5720
 Epoch 036 | Train loss 0.5693 | Val loss 0.4942 | Val Dice 0.5784
 Epoch 037 | Train loss 0.5667 | Val loss 0.4979 | Val Dice 0.5784
+Epoch 038 | Train loss 0.5671 | Val loss 0.4923 | Val Dice 0.5810
+Traceback (most recent call last):
+  File "D:\IITM\DA6401\DA6401_Assignment2\train.py", line 316, in <module>
+    train_segmentation(args)
+  File "D:\IITM\DA6401\DA6401_Assignment2\train.py", line 243, in train_segmentation
+    train_loss += loss.item() * imgs.size(0)
+KeyboardInterrupt

@@ -19,3 +19,4 @@ config: {'task': 'segmentation', 'data_root': './oxford-pet', 'epochs': 40, 'bat
 2026-04-07 07:26:52,250 INFO    MainThread:26568 [wandb_run.py:_redirect():2370] Wrapping output streams.
 2026-04-07 07:26:52,250 INFO    MainThread:26568 [wandb_run.py:_redirect():2393] Redirects installed.
 2026-04-07 07:26:52,253 INFO    MainThread:26568 [wandb_init.py:init():1078] run started, returning control to user process
+2026-04-07 20:36:19,418 INFO    MsgRouterThr:26568 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.
