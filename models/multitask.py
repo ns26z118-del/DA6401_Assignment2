@@ -42,7 +42,7 @@ class MultiTaskPerceptionModel(nn.Module):
         self.eval()
 
 
- 
+    
     def forward(self, x):
 
         self.classifier.eval()
@@ -52,25 +52,27 @@ class MultiTaskPerceptionModel(nn.Module):
         with torch.no_grad():
             cls_logits = self.classifier(x)
 
-            # ✅ NO scaling, NO normalization tricks
-            boxes = self.localizer(x)
+            boxes = self.localizer(x)   # normalized [0,1]
 
-            # Optional safety clamp (good practice)
-            boxes[:, 0] = torch.clamp(boxes[:, 0], 0, 224)
-            boxes[:, 1] = torch.clamp(boxes[:, 1], 0, 224)
-            boxes[:, 2] = torch.clamp(boxes[:, 2], 1, 224)
-            boxes[:, 3] = torch.clamp(boxes[:, 3], 1, 224)
+            # 🔥 Convert to pixel space
+            cx = boxes[:, 0] * 224.0
+            cy = boxes[:, 1] * 224.0
+            w  = boxes[:, 2] * 224.0
+            h  = boxes[:, 3] * 224.0
+
+            boxes = torch.stack([cx, cy, w, h], dim=1)
+
+            # DEBUG
+            print("DEBUG FIXED BOX:", boxes[0])
 
             seg_logits = self.segmenter(x)
-        
-        print("DEBUG BOX:", boxes[0])
 
         return {
             "classification": cls_logits,
             "localization": boxes,
             "segmentation": seg_logits
         }
-    
+        
     # def forward(self, x: torch.Tensor):
 
     #     cls_logits = self.classifier(x)     # [B, num_breeds]
