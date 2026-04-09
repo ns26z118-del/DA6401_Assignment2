@@ -1,0 +1,15 @@
+2026-04-09 19:51:51,487 INFO    MainThread:25364 [wandb_setup.py:_flush():81] Current SDK version is 0.20.1
+2026-04-09 19:51:51,487 INFO    MainThread:25364 [wandb_setup.py:_flush():81] Configure stats pid to 25364
+2026-04-09 19:51:51,488 INFO    MainThread:25364 [wandb_setup.py:_flush():81] Loading settings from C:\Users\joshu\.config\wandb\settings
+2026-04-09 19:51:51,488 INFO    MainThread:25364 [wandb_setup.py:_flush():81] Loading settings from D:\IITM\DA6401\DA6401_Assignment2\wandb\settings
+2026-04-09 19:51:51,488 INFO    MainThread:25364 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-04-09 19:51:51,488 INFO    MainThread:25364 [wandb_init.py:setup_run_log_directory():703] Logging user logs to D:\IITM\DA6401\DA6401_Assignment2\wandb\run-20260409_195151-qwxfy6ka\logs\debug.log
+2026-04-09 19:51:51,488 INFO    MainThread:25364 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to D:\IITM\DA6401\DA6401_Assignment2\wandb\run-20260409_195151-qwxfy6ka\logs\debug-internal.log
+2026-04-09 19:51:51,488 INFO    MainThread:25364 [wandb_init.py:init():831] calling init triggers
+2026-04-09 19:51:51,488 INFO    MainThread:25364 [wandb_init.py:init():836] wandb.init called with sweep_config: {}
+config: {'task': 'segmentation', 'data_root': './oxford-pet', 'epochs': 30, 'batch_size': 16, 'lr': 0.0005, 'dropout_p': 0.5, '_wandb': {}}
+2026-04-09 19:51:51,488 INFO    MainThread:25364 [wandb_init.py:init():872] starting backend
+2026-04-09 19:51:51,759 INFO    MainThread:25364 [wandb_init.py:init():875] sending inform_init request
+2026-04-09 19:51:51,782 INFO    MainThread:25364 [wandb_init.py:init():883] backend started and connected
+2026-04-09 19:51:51,784 INFO    MainThread:25364 [wandb_init.py:init():956] updated telemetry
+2026-04-09 19:51:51,837 INFO    MainThread:25364 [wandb_init.py:init():980] communicating run to backend with 90.0 second timeout

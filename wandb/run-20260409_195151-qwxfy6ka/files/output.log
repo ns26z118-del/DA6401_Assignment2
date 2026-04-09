@@ -1,0 +1,17 @@
+[Dataset] 3671 samples with XML annotations
+[Dataset] train: 3303 samples
+[Dataset] 3671 samples with XML annotations
+[Dataset] val: 368 samples
+D:\IITM\DA6401\DA6401_Assignment2\models\segmentation.py:97: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(classifier_path, map_location="cpu")
+Loaded encoder weights from checkpoints/classifier.pth
+Epoch 001 | Train 0.7498 | Val 0.5706 | Dice 0.5368
+  ✓ Saved (dice=0.5368)
+Epoch 002 | Train 0.6850 | Val 0.5916 | Dice 0.5260
+Epoch 003 | Train 0.6783 | Val 0.5553 | Dice 0.5338
+Epoch 004 | Train 0.6743 | Val 0.5896 | Dice 0.5156
+Epoch 005 | Train 0.6657 | Val 0.5653 | Dice 0.5304
+Epoch 006 | Train 0.6645 | Val 0.7303 | Dice 0.3905
+Epoch 007 | Train 0.6579 | Val 0.5546 | Dice 0.5251
+Epoch 008 | Train 0.6573 | Val 0.5881 | Dice 0.5077
+Epoch 009 | Train 0.6537 | Val 0.5857 | Dice 0.5275

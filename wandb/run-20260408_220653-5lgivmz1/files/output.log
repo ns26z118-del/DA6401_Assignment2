@@ -1,0 +1,27 @@
+D:\IITM\DA6401\DA6401_Assignment2\models\localization.py:69: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(classifier_path, map_location="cpu")
+Loaded encoder weights from checkpoints/classifier.pth
+Epoch 001 | Train loss 0.5402 | Val loss 0.1750
+  ✓ Saved best model (val_loss=0.1750)
+Epoch 002 | Train loss 0.4609 | Val loss 0.0253
+  ✓ Saved best model (val_loss=0.0253)
+Epoch 003 | Train loss 0.4589 | Val loss 0.0169
+  ✓ Saved best model (val_loss=0.0169)
+Epoch 004 | Train loss 0.4558 | Val loss 0.0350
+Epoch 005 | Train loss 0.4538 | Val loss 0.0183
+Epoch 006 | Train loss 0.4512 | Val loss 0.0105
+  ✓ Saved best model (val_loss=0.0105)
+Epoch 007 | Train loss 0.4489 | Val loss 0.0194
+Epoch 008 | Train loss 0.4464 | Val loss 0.0053
+  ✓ Saved best model (val_loss=0.0053)
+Epoch 009 | Train loss 0.4454 | Val loss 0.0221
+Epoch 010 | Train loss 0.4445 | Val loss 0.0091
+Epoch 011 | Train loss 0.4437 | Val loss 0.0041
+  ✓ Saved best model (val_loss=0.0041)
+Epoch 012 | Train loss 0.4429 | Val loss 0.0046
+Epoch 013 | Train loss 0.4423 | Val loss 0.0018
+  ✓ Saved best model (val_loss=0.0018)
+Epoch 014 | Train loss 0.4419 | Val loss 0.0012
+  ✓ Saved best model (val_loss=0.0012)
+Epoch 015 | Train loss 0.4417 | Val loss 0.0010
+  ✓ Saved best model (val_loss=0.0010)

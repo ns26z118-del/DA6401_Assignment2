@@ -1,0 +1,55 @@
+{
+  "os":  "Windows-10-10.0.26200-SP0",
+  "python":  "CPython 3.10.18",
+  "startedAt":  "2026-04-09T14:21:51.783357Z",
+  "args":  [
+    "--task",
+    "segmentation",
+    "--data_root",
+    "./oxford-pet",
+    "--epochs",
+    "30",
+    "--lr",
+    "5e-4",
+    "--batch_size",
+    "16"
+  ],
+  "program":  "D:\\IITM\\DA6401\\DA6401_Assignment2\\train.py",
+  "codePath":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/ns26z118-del/DA6401_Assignment2.git",
+    "commit":  "d74f38030919b3e90eebdfa55768b5f1721da724"
+  },
+  "email":  "ns26z118@smail.iitm.ac.in",
+  "root":  "D:\\IITM\\DA6401\\DA6401_Assignment2",
+  "host":  "JJ-Legion",
+  "executable":  "C:\\Users\\joshu\\anaconda3\\envs\\GAN\\python.exe",
+  "codePathLocal":  "train.py",
+  "cpu_count":  6,
+  "cpu_count_logical":  12,
+  "gpu":  "NVIDIA GeForce GTX 1650",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "215821053952",
+      "used":  "123894620160"
+    }
+  },
+  "memory":  {
+    "total":  "17083187200"
+  },
+  "cpu":  {
+    "count":  6,
+    "countLogical":  12
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce GTX 1650",
+      "memoryTotal":  "4294967296",
+      "cudaCores":  896,
+      "architecture":  "Turing",
+      "uuid":  "GPU-8a949341-2c03-b43e-1b1b-c95f6fe582cb"
+    }
+  ],
+  "cudaVersion":  "12.9"
+}

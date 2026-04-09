@@ -1,0 +1,51 @@
+[Dataset] 3671 samples with XML annotations
+[Dataset] train: 3303 samples
+[Dataset] 3671 samples with XML annotations
+[Dataset] val: 368 samples
+Loaded encoder weights from checkpoints/classifier.pth
+Encoder frozen — only training regression head
+Epoch 001 | Train loss 4250.2664 | Val loss 1131.5126 | Val IoU 0.3285
+  ✓ Saved (val_loss=1131.5126, IoU=0.3285)
+Epoch 002 | Train loss 857.7754 | Val loss 745.3795 | Val IoU 0.4411
+  ✓ Saved (val_loss=745.3795, IoU=0.4411)
+Epoch 003 | Train loss 665.2968 | Val loss 634.4194 | Val IoU 0.4696
+  ✓ Saved (val_loss=634.4194, IoU=0.4696)
+Epoch 004 | Train loss 554.7759 | Val loss 587.2790 | Val IoU 0.4984
+  ✓ Saved (val_loss=587.2790, IoU=0.4984)
+Epoch 005 | Train loss 497.7235 | Val loss 574.6561 | Val IoU 0.4980
+  ✓ Saved (val_loss=574.6561, IoU=0.4980)
+Epoch 006 | Train loss 449.3228 | Val loss 560.7587 | Val IoU 0.5024
+  ✓ Saved (val_loss=560.7587, IoU=0.5024)
+Epoch 007 | Train loss 412.6972 | Val loss 535.6076 | Val IoU 0.5155
+  ✓ Saved (val_loss=535.6076, IoU=0.5155)
+Epoch 008 | Train loss 377.7251 | Val loss 522.8433 | Val IoU 0.5120
+  ✓ Saved (val_loss=522.8433, IoU=0.5120)
+Epoch 009 | Train loss 351.6835 | Val loss 536.6373 | Val IoU 0.5177
+Epoch 010 | Train loss 313.2270 | Val loss 531.4894 | Val IoU 0.5128
+Epoch 011 | Train loss 298.3579 | Val loss 504.3781 | Val IoU 0.5225
+  ✓ Saved (val_loss=504.3781, IoU=0.5225)
+Epoch 012 | Train loss 286.9411 | Val loss 496.6527 | Val IoU 0.5277
+  ✓ Saved (val_loss=496.6527, IoU=0.5277)
+Epoch 013 | Train loss 271.5202 | Val loss 488.5372 | Val IoU 0.5335
+  ✓ Saved (val_loss=488.5372, IoU=0.5335)
+Epoch 014 | Train loss 266.7269 | Val loss 494.7722 | Val IoU 0.5321
+Epoch 015 | Train loss 234.5070 | Val loss 507.2784 | Val IoU 0.5243
+Epoch 016 | Train loss 234.0821 | Val loss 514.9035 | Val IoU 0.5213
+Epoch 017 | Train loss 226.8597 | Val loss 495.9384 | Val IoU 0.5266
+Epoch 018 | Train loss 213.0832 | Val loss 505.6265 | Val IoU 0.5264
+Epoch 019 | Train loss 198.6387 | Val loss 482.0339 | Val IoU 0.5425
+  ✓ Saved (val_loss=482.0339, IoU=0.5425)
+Epoch 020 | Train loss 210.0733 | Val loss 478.6127 | Val IoU 0.5358
+  ✓ Saved (val_loss=478.6127, IoU=0.5358)
+Epoch 021 | Train loss 201.1711 | Val loss 484.8642 | Val IoU 0.5334
+Epoch 022 | Train loss 189.0332 | Val loss 479.9507 | Val IoU 0.5397
+Epoch 023 | Train loss 184.5347 | Val loss 475.8833 | Val IoU 0.5429
+  ✓ Saved (val_loss=475.8833, IoU=0.5429)
+Epoch 024 | Train loss 186.6330 | Val loss 471.9992 | Val IoU 0.5406
+  ✓ Saved (val_loss=471.9992, IoU=0.5406)
+Epoch 025 | Train loss 179.6535 | Val loss 472.4678 | Val IoU 0.5413
+Epoch 026 | Train loss 168.8978 | Val loss 476.9587 | Val IoU 0.5430
+Epoch 027 | Train loss 164.7298 | Val loss 496.9449 | Val IoU 0.5310
+Epoch 028 | Train loss 178.5085 | Val loss 488.8840 | Val IoU 0.5303
+Epoch 029 | Train loss 173.3291 | Val loss 474.9544 | Val IoU 0.5389
+Epoch 030 | Train loss 169.2372 | Val loss 485.8097 | Val IoU 0.5378

@@ -1,0 +1,16 @@
+{"time":"2026-04-08T22:06:53.5459317+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260408_220653-5lgivmz1\\logs\\debug-core.log"}
+{"time":"2026-04-08T22:06:54.276424+05:30","level":"INFO","msg":"stream: created new stream","id":"5lgivmz1"}
+{"time":"2026-04-08T22:06:54.276424+05:30","level":"INFO","msg":"stream: started","id":"5lgivmz1"}
+{"time":"2026-04-08T22:06:54.2769801+05:30","level":"INFO","msg":"sender: started","stream_id":"5lgivmz1"}
+{"time":"2026-04-08T22:06:54.276424+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"5lgivmz1"}
+{"time":"2026-04-08T22:06:54.2769801+05:30","level":"INFO","msg":"handler: started","stream_id":"5lgivmz1"}
+{"time":"2026-04-08T22:06:55.2337829+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-04-09T00:50:11.3681838+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-04-09T00:50:11.3681838+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-04-09T00:50:12.3966315+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.6706874,"progress":"2.1KB/2.1KB"},{"desc":"uploading config.yaml","runtime_seconds":0.0010905,"progress":"624B/624B"}],"total_operations":2}}
+{"time":"2026-04-09T00:50:13.1597662+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-09T00:50:13.6780186+05:30","level":"INFO","msg":"stream: closing","id":"5lgivmz1"}
+{"time":"2026-04-09T00:50:13.6780186+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"5lgivmz1"}
+{"time":"2026-04-09T00:50:13.6780186+05:30","level":"INFO","msg":"sender: closed","stream_id":"5lgivmz1"}
+{"time":"2026-04-09T00:50:13.6790411+05:30","level":"INFO","msg":"handler: closed","stream_id":"5lgivmz1"}
+{"time":"2026-04-09T00:50:13.6790411+05:30","level":"INFO","msg":"stream: closed","id":"5lgivmz1"}
