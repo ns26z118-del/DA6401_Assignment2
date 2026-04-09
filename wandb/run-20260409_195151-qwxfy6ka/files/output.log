@@ -15,3 +15,32 @@ Epoch 006 | Train 0.6645 | Val 0.7303 | Dice 0.3905
 Epoch 007 | Train 0.6579 | Val 0.5546 | Dice 0.5251
 Epoch 008 | Train 0.6573 | Val 0.5881 | Dice 0.5077
 Epoch 009 | Train 0.6537 | Val 0.5857 | Dice 0.5275
+Epoch 010 | Train 0.6436 | Val 0.5475 | Dice 0.5331
+Epoch 011 | Train 0.6404 | Val 0.5418 | Dice 0.5456
+  ✓ Saved (dice=0.5456)
+Epoch 012 | Train 0.6360 | Val 0.6038 | Dice 0.4904
+Epoch 013 | Train 0.6298 | Val 0.5452 | Dice 0.5588
+  ✓ Saved (dice=0.5588)
+Epoch 014 | Train 0.6244 | Val 0.5312 | Dice 0.5554
+Epoch 015 | Train 0.6174 | Val 0.4967 | Dice 0.5701
+  ✓ Saved (dice=0.5701)
+Epoch 016 | Train 0.6111 | Val 0.5308 | Dice 0.5387
+Epoch 017 | Train 0.6095 | Val 0.5334 | Dice 0.5307
+Epoch 018 | Train 0.6024 | Val 0.5099 | Dice 0.5742
+  ✓ Saved (dice=0.5742)
+Epoch 019 | Train 0.5980 | Val 0.4981 | Dice 0.5823
+  ✓ Saved (dice=0.5823)
+Epoch 020 | Train 0.5957 | Val 0.5212 | Dice 0.5495
+Epoch 021 | Train 0.5895 | Val 0.5532 | Dice 0.5339
+Epoch 022 | Train 0.5828 | Val 0.4757 | Dice 0.5888
+  ✓ Saved (dice=0.5888)
+Epoch 023 | Train 0.5821 | Val 0.4840 | Dice 0.5926
+  ✓ Saved (dice=0.5926)
+Epoch 024 | Train 0.5770 | Val 0.4726 | Dice 0.5963
+  ✓ Saved (dice=0.5963)
+Epoch 025 | Train 0.5723 | Val 0.4863 | Dice 0.5869
+Epoch 026 | Train 0.5690 | Val 0.4837 | Dice 0.5793
+Epoch 027 | Train 0.5653 | Val 0.4784 | Dice 0.5943
+Epoch 028 | Train 0.5628 | Val 0.4828 | Dice 0.5833
+Epoch 029 | Train 0.5622 | Val 0.4827 | Dice 0.5868
+Epoch 030 | Train 0.5557 | Val 0.4783 | Dice 0.5911

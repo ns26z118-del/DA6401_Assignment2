@@ -13,3 +13,16 @@ config: {'task': 'segmentation', 'data_root': './oxford-pet', 'epochs': 30, 'bat
 2026-04-09 19:51:51,782 INFO    MainThread:25364 [wandb_init.py:init():883] backend started and connected
 2026-04-09 19:51:51,784 INFO    MainThread:25364 [wandb_init.py:init():956] updated telemetry
 2026-04-09 19:51:51,837 INFO    MainThread:25364 [wandb_init.py:init():980] communicating run to backend with 90.0 second timeout
+2026-04-09 19:51:53,204 INFO    MainThread:25364 [wandb_init.py:init():1032] starting run threads in backend
+2026-04-09 19:51:53,396 INFO    MainThread:25364 [wandb_run.py:_console_start():2453] atexit reg
+2026-04-09 19:51:53,396 INFO    MainThread:25364 [wandb_run.py:_redirect():2301] redirect: wrap_raw
+2026-04-09 19:51:53,396 INFO    MainThread:25364 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2026-04-09 19:51:53,396 INFO    MainThread:25364 [wandb_run.py:_redirect():2393] Redirects installed.
+2026-04-09 19:51:53,399 INFO    MainThread:25364 [wandb_init.py:init():1078] run started, returning control to user process
+2026-04-09 21:01:40,826 INFO    MainThread:25364 [wandb_run.py:_finish():2219] finishing run ns26z118-indian-institute-of-technology-madras/da6401-a2/qwxfy6ka
+2026-04-09 21:01:40,828 INFO    MainThread:25364 [wandb_run.py:_atexit_cleanup():2418] got exitcode: 0
+2026-04-09 21:01:40,828 INFO    MainThread:25364 [wandb_run.py:_restore():2400] restore
+2026-04-09 21:01:40,828 INFO    MainThread:25364 [wandb_run.py:_restore():2406] restore done
+2026-04-09 21:01:42,778 INFO    MainThread:25364 [wandb_run.py:_footer_history_summary_info():4000] rendering history
+2026-04-09 21:01:42,778 INFO    MainThread:25364 [wandb_run.py:_footer_history_summary_info():4032] rendering summary
+2026-04-09 21:01:42,779 INFO    MainThread:25364 [wandb_run.py:_footer_sync_info():3961] logging synced files
