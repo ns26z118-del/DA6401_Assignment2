@@ -3,7 +3,7 @@
 Usage:
     python train.py --task classification --data_root ./oxford-pet --epochs 50
     python train.py --task localization   --data_root ./oxford-pet --epochs 30
-    python train.py --task segmentation   --data_root ./oxford-pet --epochs 60 --lr 2e-4
+    python train.py --task segmentation   --data_root ./oxford-pet --epochs 40 --lr 5e-4
 """
 
 import argparse
@@ -47,6 +47,33 @@ def get_plain_transforms():
         transforms.ToTensor(),
         transforms.Normalize(mean=MEAN, std=STD),
     ])
+
+
+# ── Segmentation loss helpers ──────────────────────────────────────────────────
+
+def dice_loss_fn(logits, masks, num_classes=3):
+    """Soft Dice loss on softmax probabilities — differentiable."""
+    probs = torch.softmax(logits, dim=1)
+    loss  = 0.0
+    for c in range(num_classes):
+        p = probs[:, c]
+        t = (masks == c).float()
+        loss += 1.0 - (2.0 * (p * t).sum() + 1e-6) / (p.sum() + t.sum() + 1e-6)
+    return loss / num_classes
+
+
+def compute_dice_score(preds, masks, num_classes=3):
+    """Hard Dice score on argmax predictions — for logging only."""
+    score = 0.0
+    for c in range(num_classes):
+        p = (preds == c).float()
+        t = (masks == c).float()
+        score += (2.0 * (p * t).sum() + 1e-6) / (p.sum() + t.sum() + 1e-6)
+    return score / num_classes
+
+
+def compute_pixel_acc(preds, masks):
+    return (preds == masks).float().mean()
 
 
 # ── Classification ─────────────────────────────────────────────────────────────
@@ -168,11 +195,11 @@ def train_localizer(args):
                 imgs   = b["image"].to(device)
                 bboxes = b["bbox"].to(device)
                 pred   = model(imgs)
-                v_loss   += (mse_loss(pred, bboxes) + iou_loss(pred, bboxes)).item() * imgs.size(0)
-                iou_sum  += (1 - iou_loss(pred, bboxes).item()) * imgs.size(0)
+                v_loss  += (mse_loss(pred, bboxes) + iou_loss(pred, bboxes)).item() * imgs.size(0)
+                iou_sum += (1 - iou_loss(pred, bboxes).item()) * imgs.size(0)
                 vn += imgs.size(0)
-        v_loss  /= vn
-        mean_iou = iou_sum / vn
+        v_loss   /= vn
+        mean_iou  = iou_sum / vn
         scheduler.step()
 
         print(f"Epoch {epoch:03d} | Train loss {t_loss:.4f} | Val loss {v_loss:.4f} | Val IoU {mean_iou:.4f}")
@@ -195,35 +222,10 @@ def train_localizer(args):
 
 # ── Segmentation ───────────────────────────────────────────────────────────────
 
-def dice_loss_fn(logits, masks, num_classes=3):
-    """Soft Dice loss computed on softmax probabilities."""
-    probs = torch.softmax(logits, dim=1)
-    loss  = 0.0
-    for c in range(num_classes):
-        p = probs[:, c]
-        t = (masks == c).float()
-        loss += 1.0 - (2.0 * (p * t).sum() + 1e-6) / (p.sum() + t.sum() + 1e-6)
-    return loss / num_classes
-
-
-def compute_dice_score(preds, masks, num_classes=3):
-    """Hard Dice score for logging."""
-    score = 0.0
-    for c in range(num_classes):
-        p = (preds == c).float()
-        t = (masks == c).float()
-        score += (2.0 * (p * t).sum() + 1e-6) / (p.sum() + t.sum() + 1e-6)
-    return score / num_classes
-
-
-def compute_pixel_acc(preds, masks):
-    return (preds == masks).float().mean()
-
-
 def train_segmentation(args):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Training segmentation on: {device}")
-    wandb.init(project="da6401-a2", name="segmentation-cedice", config=vars(args))
+    wandb.init(project="da6401-a2", name="segmentation-fulltune", config=vars(args))
 
     train_ds = OxfordIIITPetDataset(args.data_root, "train", get_transforms("train"))
     val_ds   = OxfordIIITPetDataset(args.data_root, "val",   get_transforms("val"))
@@ -234,17 +236,23 @@ def train_segmentation(args):
 
     if os.path.exists("checkpoints/classifier.pth"):
         model.load_encoder_weights("checkpoints/classifier.pth")
-        print("Loaded encoder weights from classifier.pth")
+        print("Loaded encoder weights — full fine-tuning with differential LR")
     else:
-        print("WARNING: classifier.pth not found")
+        print("WARNING: classifier.pth not found — training from scratch")
 
-    # ── Combined CE + Dice loss ────────────────────────────────────────────────
-    # CE handles class-level distribution, Dice directly optimizes the
-    # overlap metric used at evaluation. Together they converge faster
-    # and reach higher Dice scores than CE alone.
     ce_loss = nn.CrossEntropyLoss()
 
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=5e-4)
+    # Discriminative fine-tuning:
+    # Encoder (pretrained) gets 10x lower LR to preserve learned features
+    # Decoder (randomly initialised) gets full LR to learn fast
+    encoder_params = list(model.encoder.parameters())
+    decoder_params = [p for n, p in model.named_parameters() if "encoder" not in n]
+
+    optimizer = torch.optim.Adam([
+        {"params": encoder_params, "lr": args.lr * 0.1},
+        {"params": decoder_params, "lr": args.lr},
+    ], weight_decay=5e-4)
+
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs)
 
     best_dice = 0.0
@@ -261,7 +269,7 @@ def train_segmentation(args):
             optimizer.zero_grad()
             logits = model(imgs)
 
-            # Combined loss: CrossEntropy + soft Dice
+            # Combined CE + soft Dice loss
             ce   = ce_loss(logits, masks)
             dice = dice_loss_fn(logits, masks)
             loss = ce + dice
@@ -270,7 +278,6 @@ def train_segmentation(args):
             optimizer.step()
             t_loss += loss.item() * imgs.size(0)
             n += imgs.size(0)
-
         t_loss /= n
 
         # ── Validate ───────────────────────────────────────────────────────────
@@ -292,9 +299,9 @@ def train_segmentation(args):
                 pix_sum  += compute_pixel_acc(preds, masks).item() * imgs.size(0)
                 vn += imgs.size(0)
 
-        v_loss   /= vn
-        v_dice    = dice_sum / vn
-        v_pix_acc = pix_sum  / vn
+        v_loss    /= vn
+        v_dice     = dice_sum / vn
+        v_pix_acc  = pix_sum  / vn
         scheduler.step()
 
         print(f"Epoch {epoch:03d} | Train {t_loss:.4f} | Val {v_loss:.4f} | "
@@ -317,8 +324,6 @@ def train_segmentation(args):
 
     wandb.finish()
     print(f"\nBest val Dice: {best_dice:.4f}")
-    print("Note: Pixel accuracy is higher than Dice because background pixels")
-    print("dominate — a model predicting all-background gets high pixel acc but Dice~0")
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────

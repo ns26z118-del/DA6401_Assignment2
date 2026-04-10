@@ -1,0 +1,55 @@
+[Dataset] 3671 samples with XML annotations
+[Dataset] train: 3303 samples
+[Dataset] 3671 samples with XML annotations
+[Dataset] val: 368 samples
+D:\IITM\DA6401\DA6401_Assignment2\models\segmentation.py:97: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(classifier_path, map_location="cpu")
+Loaded encoder weights from checkpoints/classifier.pth
+Loaded encoder weights — full fine-tuning with differential LR
+Epoch 001 | Train 1.2902 | Val 1.1063 | Dice 0.5106 | PixAcc 0.7634
+  ✓ Saved (dice=0.5106, pix_acc=0.7634)
+Epoch 002 | Train 1.1883 | Val 0.9841 | Dice 0.5459 | PixAcc 0.7895
+  ✓ Saved (dice=0.5459, pix_acc=0.7895)
+Epoch 003 | Train 1.1707 | Val 1.0416 | Dice 0.5961 | PixAcc 0.7877
+  ✓ Saved (dice=0.5961, pix_acc=0.7877)
+Epoch 004 | Train 1.1624 | Val 1.0353 | Dice 0.5802 | PixAcc 0.7853
+Epoch 005 | Train 1.1513 | Val 1.0227 | Dice 0.6107 | PixAcc 0.7931
+  ✓ Saved (dice=0.6107, pix_acc=0.7931)
+Epoch 006 | Train 1.1468 | Val 1.0806 | Dice 0.5526 | PixAcc 0.7545
+Epoch 007 | Train 1.1403 | Val 0.9514 | Dice 0.6096 | PixAcc 0.7985
+Epoch 008 | Train 1.1329 | Val 0.9464 | Dice 0.6140 | PixAcc 0.8128
+  ✓ Saved (dice=0.6140, pix_acc=0.8128)
+Epoch 009 | Train 1.1253 | Val 0.9393 | Dice 0.6490 | PixAcc 0.8018
+  ✓ Saved (dice=0.6490, pix_acc=0.8018)
+Epoch 010 | Train 1.1209 | Val 0.9815 | Dice 0.6158 | PixAcc 0.7983
+Epoch 011 | Train 1.1163 | Val 0.9472 | Dice 0.6140 | PixAcc 0.8021
+Epoch 012 | Train 1.0998 | Val 0.9538 | Dice 0.6107 | PixAcc 0.7961
+Epoch 013 | Train 1.1078 | Val 0.9446 | Dice 0.6382 | PixAcc 0.8010
+Epoch 014 | Train 1.0985 | Val 0.8943 | Dice 0.6366 | PixAcc 0.8132
+Epoch 015 | Train 1.0946 | Val 0.9724 | Dice 0.6240 | PixAcc 0.7959
+Epoch 016 | Train 1.0870 | Val 1.0251 | Dice 0.5919 | PixAcc 0.7778
+Epoch 017 | Train 1.0809 | Val 0.9577 | Dice 0.6196 | PixAcc 0.7978
+Epoch 018 | Train 1.0770 | Val 0.9304 | Dice 0.6259 | PixAcc 0.8060
+Epoch 019 | Train 1.0801 | Val 0.9545 | Dice 0.6217 | PixAcc 0.7983
+Epoch 020 | Train 1.0679 | Val 0.8987 | Dice 0.6464 | PixAcc 0.8102
+Epoch 021 | Train 1.0648 | Val 0.9291 | Dice 0.6332 | PixAcc 0.8020
+Epoch 022 | Train 1.0605 | Val 0.9284 | Dice 0.6386 | PixAcc 0.8049
+Epoch 023 | Train 1.0511 | Val 0.9224 | Dice 0.6473 | PixAcc 0.8074
+Epoch 024 | Train 1.0504 | Val 0.9019 | Dice 0.6246 | PixAcc 0.8072
+Epoch 025 | Train 1.0419 | Val 0.9278 | Dice 0.6286 | PixAcc 0.7998
+Epoch 026 | Train 1.0377 | Val 0.8906 | Dice 0.6366 | PixAcc 0.8085
+Epoch 027 | Train 1.0350 | Val 0.9253 | Dice 0.6290 | PixAcc 0.7980
+Epoch 028 | Train 1.0255 | Val 0.9114 | Dice 0.6391 | PixAcc 0.8045
+Epoch 029 | Train 1.0219 | Val 0.8973 | Dice 0.6406 | PixAcc 0.8051
+Epoch 030 | Train 1.0236 | Val 0.8940 | Dice 0.6409 | PixAcc 0.8065
+Epoch 031 | Train 1.0091 | Val 0.9074 | Dice 0.6294 | PixAcc 0.8048
+Epoch 032 | Train 1.0099 | Val 0.9052 | Dice 0.6346 | PixAcc 0.8043
+Epoch 033 | Train 1.0042 | Val 0.8924 | Dice 0.6531 | PixAcc 0.8060
+  ✓ Saved (dice=0.6531, pix_acc=0.8060)
+Epoch 034 | Train 1.0027 | Val 0.8828 | Dice 0.6498 | PixAcc 0.8088
+Epoch 035 | Train 1.0004 | Val 0.8999 | Dice 0.6453 | PixAcc 0.8045
+Epoch 036 | Train 0.9974 | Val 0.9120 | Dice 0.6330 | PixAcc 0.8017
+Epoch 037 | Train 0.9955 | Val 0.9039 | Dice 0.6422 | PixAcc 0.8030
+Epoch 038 | Train 0.9895 | Val 0.8988 | Dice 0.6457 | PixAcc 0.8042
+Epoch 039 | Train 0.9846 | Val 0.8948 | Dice 0.6454 | PixAcc 0.8049
+Epoch 040 | Train 0.9929 | Val 0.8979 | Dice 0.6465 | PixAcc 0.8043
