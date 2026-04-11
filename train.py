@@ -240,7 +240,9 @@ def train_segmentation(args):
     else:
         print("WARNING: classifier.pth not found — training from scratch")
 
-    ce_loss = nn.CrossEntropyLoss()
+    # ce_loss = nn.CrossEntropyLoss()
+    class_weights = torch.tensor([1.0, 1.0, 3.0], device=device)
+    ce_loss = nn.CrossEntropyLoss(weight=class_weights)
 
     # Discriminative fine-tuning:
     # Encoder (pretrained) gets 10x lower LR to preserve learned features

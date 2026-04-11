@@ -1,0 +1,28 @@
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_setup.py:_flush():81] Current SDK version is 0.20.1
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_setup.py:_flush():81] Configure stats pid to 4656
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_setup.py:_flush():81] Loading settings from C:\Users\joshu\.config\wandb\settings
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_setup.py:_flush():81] Loading settings from D:\IITM\DA6401\DA6401_Assignment2\wandb\settings
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_init.py:setup_run_log_directory():703] Logging user logs to D:\IITM\DA6401\DA6401_Assignment2\wandb\run-20260411_170026-nhu4pav6\logs\debug.log
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to D:\IITM\DA6401\DA6401_Assignment2\wandb\run-20260411_170026-nhu4pav6\logs\debug-internal.log
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_init.py:init():831] calling init triggers
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_init.py:init():836] wandb.init called with sweep_config: {}
+config: {'task': 'segmentation', 'data_root': './oxford-pet', 'epochs': 50, 'batch_size': 16, 'lr': 0.0005, 'dropout_p': 0.5, '_wandb': {}}
+2026-04-11 17:00:26,018 INFO    MainThread:4656 [wandb_init.py:init():872] starting backend
+2026-04-11 17:00:26,254 INFO    MainThread:4656 [wandb_init.py:init():875] sending inform_init request
+2026-04-11 17:00:26,277 INFO    MainThread:4656 [wandb_init.py:init():883] backend started and connected
+2026-04-11 17:00:26,279 INFO    MainThread:4656 [wandb_init.py:init():956] updated telemetry
+2026-04-11 17:00:26,348 INFO    MainThread:4656 [wandb_init.py:init():980] communicating run to backend with 90.0 second timeout
+2026-04-11 17:00:27,585 INFO    MainThread:4656 [wandb_init.py:init():1032] starting run threads in backend
+2026-04-11 17:00:27,867 INFO    MainThread:4656 [wandb_run.py:_console_start():2453] atexit reg
+2026-04-11 17:00:27,867 INFO    MainThread:4656 [wandb_run.py:_redirect():2301] redirect: wrap_raw
+2026-04-11 17:00:27,868 INFO    MainThread:4656 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2026-04-11 17:00:27,868 INFO    MainThread:4656 [wandb_run.py:_redirect():2393] Redirects installed.
+2026-04-11 17:00:27,873 INFO    MainThread:4656 [wandb_init.py:init():1078] run started, returning control to user process
+2026-04-11 18:56:04,513 INFO    MainThread:4656 [wandb_run.py:_finish():2219] finishing run ns26z118-indian-institute-of-technology-madras/da6401-a2/nhu4pav6
+2026-04-11 18:56:04,514 INFO    MainThread:4656 [wandb_run.py:_atexit_cleanup():2418] got exitcode: 0
+2026-04-11 18:56:04,514 INFO    MainThread:4656 [wandb_run.py:_restore():2400] restore
+2026-04-11 18:56:04,514 INFO    MainThread:4656 [wandb_run.py:_restore():2406] restore done
+2026-04-11 18:56:07,009 INFO    MainThread:4656 [wandb_run.py:_footer_history_summary_info():4000] rendering history
+2026-04-11 18:56:07,011 INFO    MainThread:4656 [wandb_run.py:_footer_history_summary_info():4032] rendering summary
+2026-04-11 18:56:07,011 INFO    MainThread:4656 [wandb_run.py:_footer_sync_info():3961] logging synced files
