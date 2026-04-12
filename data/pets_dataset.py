@@ -1,11 +1,4 @@
-"""Oxford-IIIT Pet multi-task dataset loader.
-
-Key design decisions:
-- Only includes samples that have bounding box XML annotations
-- Bounding boxes are in PIXEL space (0-224), NOT normalized
-- Masks remapped from 1,2,3 to 0,1,2
-"""
-
+ 
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Callable, Optional, Tuple

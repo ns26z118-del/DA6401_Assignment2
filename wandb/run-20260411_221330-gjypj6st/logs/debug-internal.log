@@ -1,0 +1,16 @@
+{"time":"2026-04-11T22:13:30.3074353+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260411_221330-gjypj6st\\logs\\debug-core.log"}
+{"time":"2026-04-11T22:13:30.7951928+05:30","level":"INFO","msg":"stream: created new stream","id":"gjypj6st"}
+{"time":"2026-04-11T22:13:30.7951928+05:30","level":"INFO","msg":"stream: started","id":"gjypj6st"}
+{"time":"2026-04-11T22:13:30.7951928+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"gjypj6st"}
+{"time":"2026-04-11T22:13:30.7951928+05:30","level":"INFO","msg":"handler: started","stream_id":"gjypj6st"}
+{"time":"2026-04-11T22:13:30.7951928+05:30","level":"INFO","msg":"sender: started","stream_id":"gjypj6st"}
+{"time":"2026-04-11T22:13:31.3570282+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-04-11T22:15:23.6143619+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-04-11T22:15:23.6143619+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-04-11T22:15:24.6244052+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading media\\images\\q2.7\\wildcard_predictions_0_21dffbfd7d55e29132fe.png","runtime_seconds":0.7135675,"progress":"334.8KB/334.8KB"},{"desc":"uploading media\\images\\q2.7\\wildcard_predictions_0_04efc3ba0c16729defbb.png","runtime_seconds":0.7135675,"progress":"400.0KB/475.8KB"},{"desc":"uploading media\\images\\q2.7\\wildcard_predictions_0_a53a5df692cb9c40a04d.png","runtime_seconds":0.7135675,"progress":"513.2KB/513.2KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.6380498,"progress":"529B/529B"},{"desc":"uploading output.log","runtime_seconds":0.6380498,"progress":"2.0KB/2.0KB"},{"desc":"uploading config.yaml","runtime_seconds":0.2563448,"progress":"442B/442B"}],"total_operations":6}}
+{"time":"2026-04-11T22:15:26.5853419+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-11T22:15:27.0599507+05:30","level":"INFO","msg":"stream: closing","id":"gjypj6st"}
+{"time":"2026-04-11T22:15:27.0599507+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"gjypj6st"}
+{"time":"2026-04-11T22:15:27.0599507+05:30","level":"INFO","msg":"sender: closed","stream_id":"gjypj6st"}
+{"time":"2026-04-11T22:15:27.0599507+05:30","level":"INFO","msg":"handler: closed","stream_id":"gjypj6st"}
+{"time":"2026-04-11T22:15:27.0599507+05:30","level":"INFO","msg":"stream: closed","id":"gjypj6st"}

@@ -1,0 +1,15 @@
+[no_batchnorm] Ep001 | Train 3.6033/0.023 | Val 3.9286/0.000
+[no_batchnorm] Ep002 | Train 3.5934/0.026 | Val 4.0483/0.000
+[no_batchnorm] Ep003 | Train 3.5911/0.024 | Val 3.9639/0.000
+[no_batchnorm] Ep004 | Train 3.5893/0.028 | Val 3.9750/0.000
+[no_batchnorm] Ep005 | Train 3.5909/0.025 | Val 4.0187/0.000
+[no_batchnorm] Ep006 | Train 3.5891/0.024 | Val 4.0372/0.000
+[no_batchnorm] Ep007 | Train 3.5887/0.024 | Val 4.0880/0.000
+[no_batchnorm] Ep008 | Train 3.5876/0.022 | Val 4.0600/0.000
+[no_batchnorm] Ep009 | Train 3.5869/0.025 | Val 4.1530/0.000
+[no_batchnorm] Ep010 | Train 3.5865/0.021 | Val 4.1266/0.000
+[no_batchnorm] Ep011 | Train 3.5859/0.027 | Val 4.1347/0.000
+[no_batchnorm] Ep012 | Train 3.5853/0.028 | Val 4.1433/0.000
+[no_batchnorm] Ep013 | Train 3.5849/0.023 | Val 4.1367/0.000
+[no_batchnorm] Ep014 | Train 3.5846/0.029 | Val 4.1394/0.000
+[no_batchnorm] Ep015 | Train 3.5843/0.030 | Val 4.1405/0.000

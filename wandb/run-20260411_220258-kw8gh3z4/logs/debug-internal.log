@@ -1,0 +1,16 @@
+{"time":"2026-04-11T22:02:58.9056148+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260411_220258-kw8gh3z4\\logs\\debug-core.log"}
+{"time":"2026-04-11T22:02:59.6822519+05:30","level":"INFO","msg":"stream: created new stream","id":"kw8gh3z4"}
+{"time":"2026-04-11T22:02:59.6822519+05:30","level":"INFO","msg":"stream: started","id":"kw8gh3z4"}
+{"time":"2026-04-11T22:02:59.6822519+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"kw8gh3z4"}
+{"time":"2026-04-11T22:02:59.6822519+05:30","level":"INFO","msg":"sender: started","stream_id":"kw8gh3z4"}
+{"time":"2026-04-11T22:02:59.6822519+05:30","level":"INFO","msg":"handler: started","stream_id":"kw8gh3z4"}
+{"time":"2026-04-11T22:03:00.6216868+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-04-11T22:03:04.4498759+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-04-11T22:03:04.4498759+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-04-11T22:03:05.4585727+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.658729,"progress":"836B/836B"},{"desc":"uploading media\\images\\feature_maps\\input_0_00a3ecf11e3bdb26b8fb.png","runtime_seconds":0.658729,"progress":"129.5KB/129.5KB"},{"desc":"uploading media\\images\\feature_maps\\first_conv_0_aad19cf84135f9246b55.png","runtime_seconds":0.658729,"progress":"622.4KB/622.4KB"},{"desc":"uploading media\\images\\feature_maps\\last_conv_0_becb96a71f6368f3082a.png","runtime_seconds":0.658729,"progress":"19.4KB/19.4KB"},{"desc":"uploading config.yaml","runtime_seconds":0.2443193,"progress":"442B/442B"}],"total_operations":5}}
+{"time":"2026-04-11T22:03:07.54567+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-11T22:03:08.0196475+05:30","level":"INFO","msg":"stream: closing","id":"kw8gh3z4"}
+{"time":"2026-04-11T22:03:08.0196475+05:30","level":"INFO","msg":"handler: closed","stream_id":"kw8gh3z4"}
+{"time":"2026-04-11T22:03:08.0196475+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"kw8gh3z4"}
+{"time":"2026-04-11T22:03:08.0196475+05:30","level":"INFO","msg":"sender: closed","stream_id":"kw8gh3z4"}
+{"time":"2026-04-11T22:03:08.0196475+05:30","level":"INFO","msg":"stream: closed","id":"kw8gh3z4"}

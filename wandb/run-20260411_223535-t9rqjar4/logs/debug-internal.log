@@ -1,0 +1,16 @@
+{"time":"2026-04-11T22:35:35.8963076+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260411_223535-t9rqjar4\\logs\\debug-core.log"}
+{"time":"2026-04-11T22:35:36.4008653+05:30","level":"INFO","msg":"stream: created new stream","id":"t9rqjar4"}
+{"time":"2026-04-11T22:35:36.4008653+05:30","level":"INFO","msg":"stream: started","id":"t9rqjar4"}
+{"time":"2026-04-11T22:35:36.4008653+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"t9rqjar4"}
+{"time":"2026-04-11T22:35:36.4008653+05:30","level":"INFO","msg":"handler: started","stream_id":"t9rqjar4"}
+{"time":"2026-04-11T22:35:36.4008653+05:30","level":"INFO","msg":"sender: started","stream_id":"t9rqjar4"}
+{"time":"2026-04-11T22:35:36.9289011+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-04-12T04:52:50.0759253+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-04-12T04:52:50.0780829+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-04-12T04:52:51.1345722+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading media\\images\\activations\\epoch_15_14_c15ade4d3e641439c30b.png","runtime_seconds":0.7274271,"progress":"15.8KB/15.8KB"},{"desc":"uploading output.log","runtime_seconds":0.7257594,"progress":"945B/945B"},{"desc":"uploading config.yaml","runtime_seconds":0.2517486,"progress":"530B/530B"}],"total_operations":3}}
+{"time":"2026-04-12T04:52:51.9003992+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-12T04:52:52.4423958+05:30","level":"INFO","msg":"stream: closing","id":"t9rqjar4"}
+{"time":"2026-04-12T04:52:52.4423958+05:30","level":"INFO","msg":"sender: closed","stream_id":"t9rqjar4"}
+{"time":"2026-04-12T04:52:52.4429207+05:30","level":"INFO","msg":"handler: closed","stream_id":"t9rqjar4"}
+{"time":"2026-04-12T04:52:52.4423958+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"t9rqjar4"}
+{"time":"2026-04-12T04:52:52.4439635+05:30","level":"INFO","msg":"stream: closed","id":"t9rqjar4"}

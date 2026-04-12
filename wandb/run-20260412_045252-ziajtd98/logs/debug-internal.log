@@ -1,0 +1,15 @@
+{"time":"2026-04-12T04:52:52.5742931+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260412_045252-ziajtd98\\logs\\debug-core.log"}
+{"time":"2026-04-12T04:52:53.0784554+05:30","level":"INFO","msg":"stream: created new stream","id":"ziajtd98"}
+{"time":"2026-04-12T04:52:53.0789757+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"ziajtd98"}
+{"time":"2026-04-12T04:52:53.0789757+05:30","level":"INFO","msg":"handler: started","stream_id":"ziajtd98"}
+{"time":"2026-04-12T04:52:53.0789757+05:30","level":"INFO","msg":"sender: started","stream_id":"ziajtd98"}
+{"time":"2026-04-12T04:52:53.0789757+05:30","level":"INFO","msg":"stream: started","id":"ziajtd98"}
+{"time":"2026-04-12T04:52:53.6171708+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-04-12T11:00:15.8613674+05:30","level":"INFO","msg":"stream: closing","id":"ziajtd98"}
+{"time":"2026-04-12T11:00:15.8650156+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-04-12T11:00:15.8650156+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-04-12T11:00:18.2962258+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-12T11:00:18.7649507+05:30","level":"INFO","msg":"sender: closed","stream_id":"ziajtd98"}
+{"time":"2026-04-12T11:00:18.7649507+05:30","level":"INFO","msg":"handler: closed","stream_id":"ziajtd98"}
+{"time":"2026-04-12T11:00:18.7649507+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"ziajtd98"}
+{"time":"2026-04-12T11:00:18.7665389+05:30","level":"INFO","msg":"stream: closed","id":"ziajtd98"}

@@ -1,0 +1,33 @@
+Loading MultiTaskPerceptionModel...
+Downloading...
+From (original): https://drive.google.com/uc?id=1UlRtWWD65W0oqOFNawrYU11OjAjUIGM7
+From (redirected): https://drive.google.com/uc?id=1UlRtWWD65W0oqOFNawrYU11OjAjUIGM7&confirm=t&uuid=97ebc844-012e-46f1-b98c-4f84b1b51400
+To: D:\IITM\DA6401\DA6401_Assignment2\classifier.pth
+100%|███████████████████████████████████████████████████████████████████████████████| 516M/516M [00:44<00:00, 11.5MB/s]
+Downloading...
+From (original): https://drive.google.com/uc?id=1RG1dD-OexmktgGfKj1tsxUEobaowq7hJ
+From (redirected): https://drive.google.com/uc?id=1RG1dD-OexmktgGfKj1tsxUEobaowq7hJ&confirm=t&uuid=8391f8ac-d349-4582-9477-834fc8547acd
+To: D:\IITM\DA6401\DA6401_Assignment2\localizer.pth
+100%|███████████████████████████████████████████████████████████████████████████████| 465M/465M [00:40<00:00, 11.5MB/s]
+Downloading...
+From (original): https://drive.google.com/uc?id=1mKMFjJw2qzI0lXGCCD6JVj2_H4W7cLmv
+From (redirected): https://drive.google.com/uc?id=1mKMFjJw2qzI0lXGCCD6JVj2_H4W7cLmv&confirm=t&uuid=2ab56445-ab5f-4922-b398-799375f164a9
+To: D:\IITM\DA6401\DA6401_Assignment2\unet.pth
+100%|█████████████████████████████████████████████████████████████████████████████| 81.6M/81.6M [00:07<00:00, 11.4MB/s]
+
+Processing pet1.jpg...
+Saved wildcard_1.png
+  Breed: Bengal (conf=0.770)
+  BBox:  cx=97.6 cy=83.3 w=50.1 h=58.7
+
+Processing pet2.jpg...
+Saved wildcard_2.png
+  Breed: Abyssinian (conf=0.987)
+  BBox:  cx=80.4 cy=50.7 w=86.9 h=59.4
+
+Processing pet3.jpg...
+Saved wildcard_3.png
+  Breed: Bombay (conf=0.700)
+  BBox:  cx=70.5 cy=67.0 w=51.3 h=45.8
+
+Logged 3 images to W&B

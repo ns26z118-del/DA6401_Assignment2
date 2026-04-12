@@ -1,0 +1,16 @@
+{"time":"2026-04-11T22:22:43.8809813+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260411_222243-ssb36kcf\\logs\\debug-core.log"}
+{"time":"2026-04-11T22:22:44.3721344+05:30","level":"INFO","msg":"stream: created new stream","id":"ssb36kcf"}
+{"time":"2026-04-11T22:22:44.3727141+05:30","level":"INFO","msg":"stream: started","id":"ssb36kcf"}
+{"time":"2026-04-11T22:22:44.3727141+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"ssb36kcf"}
+{"time":"2026-04-11T22:22:44.3727141+05:30","level":"INFO","msg":"sender: started","stream_id":"ssb36kcf"}
+{"time":"2026-04-11T22:22:44.3727141+05:30","level":"INFO","msg":"handler: started","stream_id":"ssb36kcf"}
+{"time":"2026-04-11T22:22:44.9461275+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-04-11T22:24:33.1346458+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-04-11T22:24:33.1346458+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-04-11T22:24:34.1339101+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading media\\images\\q2.7\\wildcard_predictions_0_ecaa3812cfb0755c7725.png","runtime_seconds":0.7043764,"progress":"448.0KB/556.2KB"},{"desc":"uploading media\\images\\q2.7\\wildcard_predictions_0_04efc3ba0c16729defbb.png","runtime_seconds":0.7043764,"progress":"384.0KB/475.8KB"},{"desc":"uploading media\\images\\q2.7\\wildcard_predictions_0_703f92f04179b7436144.png","runtime_seconds":0.7043764,"progress":"469.0KB/469.0KB"},{"desc":"uploading output.log","runtime_seconds":0.6251078,"progress":"2.0KB/2.0KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.6251078,"progress":"525B/525B"},{"desc":"uploading config.yaml","runtime_seconds":0.1967111,"progress":"442B/442B"}],"total_operations":6}}
+{"time":"2026-04-11T22:24:36.1169393+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-11T22:24:36.5920362+05:30","level":"INFO","msg":"stream: closing","id":"ssb36kcf"}
+{"time":"2026-04-11T22:24:36.5920362+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"ssb36kcf"}
+{"time":"2026-04-11T22:24:36.5920362+05:30","level":"INFO","msg":"sender: closed","stream_id":"ssb36kcf"}
+{"time":"2026-04-11T22:24:36.5920362+05:30","level":"INFO","msg":"handler: closed","stream_id":"ssb36kcf"}
+{"time":"2026-04-11T22:24:36.5920362+05:30","level":"INFO","msg":"stream: closed","id":"ssb36kcf"}

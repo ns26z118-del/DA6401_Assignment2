@@ -1,0 +1,23 @@
+Loaded classifier from checkpoints/classifier.pth
+Loaded localizer  from checkpoints/localizer.pth
+Loaded segmenter  from checkpoints/unet.pth
+
+[1] Processing pet1.jpg...
+  Saved wildcard_1.png
+  Breed: Bengal  conf=0.770
+  BBox:  cx=97.6 cy=83.3 w=50.1 h=58.7
+  Seg:   pet=4.5%  bg=80.7%  border=14.8%
+
+[2] Processing pet2.jpg...
+  Saved wildcard_2.png
+  Breed: Abyssinian  conf=0.987
+  BBox:  cx=80.4 cy=50.7 w=86.9 h=59.4
+  Seg:   pet=25.3%  bg=60.5%  border=14.2%
+
+[3] Processing pet3.jpg...
+  Saved wildcard_3.png
+  Breed: Bombay  conf=0.700
+  BBox:  cx=70.5 cy=67.0 w=51.3 h=45.8
+  Seg:   pet=13.6%  bg=69.8%  border=16.5%
+
+Logged 3 wildcard predictions to W&B.

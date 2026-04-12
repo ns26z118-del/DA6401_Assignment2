@@ -1,0 +1,16 @@
+{"time":"2026-04-11T22:06:50.2396113+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260411_220649-80nwraw5\\logs\\debug-core.log"}
+{"time":"2026-04-11T22:06:50.7442505+05:30","level":"INFO","msg":"stream: created new stream","id":"80nwraw5"}
+{"time":"2026-04-11T22:06:50.7442505+05:30","level":"INFO","msg":"stream: started","id":"80nwraw5"}
+{"time":"2026-04-11T22:06:50.7442505+05:30","level":"INFO","msg":"handler: started","stream_id":"80nwraw5"}
+{"time":"2026-04-11T22:06:50.7442505+05:30","level":"INFO","msg":"sender: started","stream_id":"80nwraw5"}
+{"time":"2026-04-11T22:06:50.7442505+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"80nwraw5"}
+{"time":"2026-04-11T22:06:51.2204836+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-04-11T22:07:06.2705382+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-04-11T22:07:06.2705382+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-04-11T22:07:07.2731511+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading media\\images\\q2.6\\samples_0_9866c0e5ac2b5560d3f1.png","runtime_seconds":0.6593359,"progress":"253.5KB/253.5KB"},{"desc":"uploading media\\images\\q2.6\\samples_0_e8a1b00adf08355d2d78.png","runtime_seconds":0.6593359,"progress":"236.0KB/236.0KB"},{"desc":"uploading media\\images\\q2.6\\samples_0_fc583246a779bd55ea27.png","runtime_seconds":0.6593359,"progress":"224.6KB/224.6KB"},{"desc":"uploading media\\images\\q2.6\\samples_0_e9c80aef02433ff98732.png","runtime_seconds":0.6593359,"progress":"205.3KB/205.3KB"},{"desc":"uploading media\\images\\q2.6\\samples_0_f3492aac68ad8cbdf4df.png","runtime_seconds":0.6593359,"progress":"219.4KB/219.4KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.6067802,"progress":"624B/624B"},{"desc":"uploading output.log","runtime_seconds":0.6067802,"progress":"275B/275B"},{"desc":"uploading history steps 0-0, summary, console lines 1-5","runtime_seconds":0.2277919},{"desc":"uploading config.yaml","runtime_seconds":0.1782602,"progress":"442B/442B"}],"total_operations":9}}
+{"time":"2026-04-11T22:07:08.1848535+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-11T22:07:08.6524994+05:30","level":"INFO","msg":"stream: closing","id":"80nwraw5"}
+{"time":"2026-04-11T22:07:08.6524994+05:30","level":"INFO","msg":"handler: closed","stream_id":"80nwraw5"}
+{"time":"2026-04-11T22:07:08.6524994+05:30","level":"INFO","msg":"sender: closed","stream_id":"80nwraw5"}
+{"time":"2026-04-11T22:07:08.6524994+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"80nwraw5"}
+{"time":"2026-04-11T22:07:08.6524994+05:30","level":"INFO","msg":"stream: closed","id":"80nwraw5"}

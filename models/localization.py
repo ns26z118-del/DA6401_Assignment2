@@ -1,12 +1,4 @@
-"""VGG11-based object localization model.
-
-Output: (cx, cy, w, h) in PIXEL space (0-224). No Sigmoid — raw linear output.
-Training loss: MSELoss + IoULoss (both operate in pixel space).
-
-Encoder strategy: freeze encoder, only train regression head.
-This is faster on limited hardware and works well since the encoder
-already learned strong visual features from classification.
-"""
+ 
 
 import torch
 import torch.nn as nn

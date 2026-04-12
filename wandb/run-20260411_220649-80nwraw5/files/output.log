@@ -1,0 +1,6 @@
+[Dataset] 3671 samples with XML annotations
+[Dataset] val: 368 samples
+Dice: 0.7024  |  Pixel Accuracy: 0.8039
+Gap: PixAcc - Dice = 0.1015
+This gap exists because background pixels dominate (~50%) — a model
+predicting all-background gets high pixel acc but near-zero Dice.

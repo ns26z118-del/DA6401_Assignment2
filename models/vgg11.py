@@ -1,26 +1,4 @@
-"""VGG11 encoder — implemented from scratch per arxiv:1409.1556.
-
-Architecture (8 conv layers + 3 FC layers = 11 weight layers):
-  Block 1: Conv(3→64,   3×3, p=1) + BN + ReLU → MaxPool(2,2) → 112×112×64
-  Block 2: Conv(64→128, 3×3, p=1) + BN + ReLU → MaxPool(2,2) → 56×56×128
-  Block 3: Conv(128→256,3×3, p=1) + BN + ReLU
-           Conv(256→256,3×3, p=1) + BN + ReLU → MaxPool(2,2) → 28×28×256
-  Block 4: Conv(256→512,3×3, p=1) + BN + ReLU
-           Conv(512→512,3×3, p=1) + BN + ReLU → MaxPool(2,2) → 14×14×512
-  Block 5: Conv(512→512,3×3, p=1) + BN + ReLU
-           Conv(512→512,3×3, p=1) + BN + ReLU → MaxPool(2,2) → 7×7×512
-
-BatchNorm placement rationale:
-  BN is inserted after Conv, before ReLU. This normalises pre-activations,
-  which stabilises the gradient signal and allows higher learning rates.
-  With BN, bias=False in Conv2d because BN's beta parameter is equivalent.
-
-Skip connection design:
-  When return_features=True, the output of each block (after MaxPool) is
-  returned as a dict. These are used as skip connections in the U-Net decoder
-  (Task 3). The skip features are captured post-MaxPool so they match the
-  spatial dimensions the decoder expects at each upsampling stage.
-"""
+ 
 
 from typing import Dict, Tuple, Union
 
@@ -115,36 +93,4 @@ class VGG11Encoder(nn.Module):
 
 VGG11 = VGG11Encoder
 
-
-# """VGG11 encoder
-# """
-
-# from typing import Dict, Tuple, Union
-
-# import torch
-# import torch.nn as nn
-
-
-# class VGG11Encoder(nn.Module):
-#     """VGG11-style encoder with optional intermediate feature returns.
-#     """
-
-#     def __init__(self, in_channels: int = 3):
-#         """Initialize the VGG11Encoder model."""
-#         pass
-
-#     def forward(
-#         self, x: torch.Tensor, return_features: bool = False
-#     ) -> Union[torch.Tensor, Tuple[torch.Tensor, Dict[str, torch.Tensor]]]:
-#         """Forward pass.
-
-#         Args:
-#             x: input image tensor [B, 3, H, W].
-#             return_features: if True, also return skip maps for U-Net decoder.
-
-#         Returns:
-#             - if return_features=False: bottleneck feature tensor.
-#             - if return_features=True: (bottleneck, feature_dict).
-#         """
-#         # TODO: Implement forward pass.
-#         raise NotImplementedError("Implement VGG11Encoder.forward")
+ 

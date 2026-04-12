@@ -1,0 +1,16 @@
+{"time":"2026-04-11T22:04:51.0140908+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"D:\\IITM\\DA6401\\DA6401_Assignment2\\wandb\\run-20260411_220450-breoxgef\\logs\\debug-core.log"}
+{"time":"2026-04-11T22:04:51.5288807+05:30","level":"INFO","msg":"stream: created new stream","id":"breoxgef"}
+{"time":"2026-04-11T22:04:51.5288807+05:30","level":"INFO","msg":"stream: started","id":"breoxgef"}
+{"time":"2026-04-11T22:04:51.5288807+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"breoxgef"}
+{"time":"2026-04-11T22:04:51.5288807+05:30","level":"INFO","msg":"handler: started","stream_id":"breoxgef"}
+{"time":"2026-04-11T22:04:51.5288807+05:30","level":"INFO","msg":"sender: started","stream_id":"breoxgef"}
+{"time":"2026-04-11T22:04:52.1608926+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-04-11T22:04:57.3367279+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-04-11T22:04:57.3367279+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-04-11T22:04:58.3421252+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-breoxgef-q2.5bbox_predictions-f43f068f7fd6994256ad3fbfb7b42c63","runtime_seconds":1.7240600000000001,"subtasks":[{"desc":"media/images/466b6cc31b37406cc752.png","runtime_seconds":0.1425999,"progress":"154.1KB/154.1KB"},{"desc":"media/images/5b081bf539bebfbb0e2d.png","runtime_seconds":0.1425999,"progress":"192.3KB/192.3KB"},{"desc":"media/images/6d495dade305baf22d16.png","runtime_seconds":0.1425999,"progress":"205.3KB/205.3KB"},{"desc":"media/images/94cfbd6466079d2b4221.png","runtime_seconds":0.1425999,"progress":"160.0KB/169.2KB"},{"desc":"media/images/cdfbc3f6bfa97a12fc80.png","runtime_seconds":0.1420478,"progress":"80.0KB/139.8KB"},{"desc":"media/images/94c03109d4615c67c9ab.png","runtime_seconds":0.1420478,"progress":"112.0KB/176.1KB"},{"desc":"media/images/622529a4cc062741f68b.png","runtime_seconds":0.1420478,"progress":"128.0KB/179.4KB"},{"desc":"media/images/e8058f560bab5851bf28.png","runtime_seconds":0.1420478,"progress":"96.0KB/197.9KB"},{"desc":"q2.5/bbox_predictions.table.json","runtime_seconds":0.1408369,"progress":"6.4KB/6.4KB"},{"desc":"media/images/66413eb7524a6ea19f54.png","runtime_seconds":0.1367771,"progress":"64.0KB/135.8KB"}]},{"desc":"uploading output.log","runtime_seconds":0.6058937,"progress":"90B/90B"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.6058937,"progress":"770B/770B"},{"desc":"uploading config.yaml","runtime_seconds":0.2250364,"progress":"442B/442B"}],"total_operations":4}}
+{"time":"2026-04-11T22:05:02.3796376+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-11T22:05:02.859112+05:30","level":"INFO","msg":"stream: closing","id":"breoxgef"}
+{"time":"2026-04-11T22:05:02.859112+05:30","level":"INFO","msg":"handler: closed","stream_id":"breoxgef"}
+{"time":"2026-04-11T22:05:02.859112+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"breoxgef"}
+{"time":"2026-04-11T22:05:02.859112+05:30","level":"INFO","msg":"sender: closed","stream_id":"breoxgef"}
+{"time":"2026-04-11T22:05:02.859112+05:30","level":"INFO","msg":"stream: closed","id":"breoxgef"}

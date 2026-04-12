@@ -1,0 +1,33 @@
+[no_batchnorm] Ep001 | Train 3.6038/0.023 | Val 3.8787/0.000
+[no_batchnorm] Ep002 | Train 3.5942/0.025 | Val 4.0777/0.000
+[no_batchnorm] Ep003 | Train 3.5909/0.027 | Val 4.0528/0.000
+[no_batchnorm] Ep004 | Train 3.5891/0.026 | Val 4.0678/0.000
+[no_batchnorm] Ep005 | Train 3.5885/0.023 | Val 4.0682/0.000
+[no_batchnorm] Ep006 | Train 3.5885/0.028 | Val 4.1805/0.000
+[no_batchnorm] Ep007 | Train 3.5878/0.027 | Val 4.1265/0.000
+[no_batchnorm] Ep008 | Train 3.5872/0.028 | Val 4.1028/0.000
+Traceback (most recent call last):
+  File "D:\IITM\DA6401\DA6401_Assignment2\experiments.py", line 503, in <module>
+    run_bn_ablation(args.data_root, epochs=15)
+  File "D:\IITM\DA6401\DA6401_Assignment2\experiments.py", line 171, in run_bn_ablation
+    t_loss, t_acc = train_cls_epoch(model, train_loader, optimizer, criterion)
+  File "D:\IITM\DA6401\DA6401_Assignment2\experiments.py", line 85, in train_cls_epoch
+    loss.backward(); optimizer.step()
+  File "C:\Users\joshu\anaconda3\envs\GAN\lib\site-packages\torch\optim\lr_scheduler.py", line 137, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "C:\Users\joshu\anaconda3\envs\GAN\lib\site-packages\torch\optim\optimizer.py", line 487, in wrapper
+    out = func(*args, **kwargs)
+  File "C:\Users\joshu\anaconda3\envs\GAN\lib\site-packages\torch\optim\optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "C:\Users\joshu\anaconda3\envs\GAN\lib\site-packages\torch\optim\adam.py", line 223, in step
+    adam(
+  File "C:\Users\joshu\anaconda3\envs\GAN\lib\site-packages\torch\optim\optimizer.py", line 154, in maybe_fallback
+    return func(*args, **kwargs)
+  File "C:\Users\joshu\anaconda3\envs\GAN\lib\site-packages\torch\optim\adam.py", line 784, in adam
+    func(
+  File "C:\Users\joshu\anaconda3\envs\GAN\lib\site-packages\torch\optim\adam.py", line 535, in _multi_tensor_adam
+    device_grads = torch._foreach_add(  # type: ignore[assignment]
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.

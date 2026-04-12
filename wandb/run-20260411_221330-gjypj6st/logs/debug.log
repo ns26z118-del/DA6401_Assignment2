@@ -1,0 +1,28 @@
+2026-04-11 22:13:30,049 INFO    MainThread:26300 [wandb_setup.py:_flush():81] Current SDK version is 0.20.1
+2026-04-11 22:13:30,049 INFO    MainThread:26300 [wandb_setup.py:_flush():81] Configure stats pid to 26300
+2026-04-11 22:13:30,049 INFO    MainThread:26300 [wandb_setup.py:_flush():81] Loading settings from C:\Users\joshu\.config\wandb\settings
+2026-04-11 22:13:30,050 INFO    MainThread:26300 [wandb_setup.py:_flush():81] Loading settings from D:\IITM\DA6401\DA6401_Assignment2\wandb\settings
+2026-04-11 22:13:30,050 INFO    MainThread:26300 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-04-11 22:13:30,050 INFO    MainThread:26300 [wandb_init.py:setup_run_log_directory():703] Logging user logs to D:\IITM\DA6401\DA6401_Assignment2\wandb\run-20260411_221330-gjypj6st\logs\debug.log
+2026-04-11 22:13:30,051 INFO    MainThread:26300 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to D:\IITM\DA6401\DA6401_Assignment2\wandb\run-20260411_221330-gjypj6st\logs\debug-internal.log
+2026-04-11 22:13:30,051 INFO    MainThread:26300 [wandb_init.py:init():831] calling init triggers
+2026-04-11 22:13:30,051 INFO    MainThread:26300 [wandb_init.py:init():836] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2026-04-11 22:13:30,052 INFO    MainThread:26300 [wandb_init.py:init():872] starting backend
+2026-04-11 22:13:30,286 INFO    MainThread:26300 [wandb_init.py:init():875] sending inform_init request
+2026-04-11 22:13:30,303 INFO    MainThread:26300 [wandb_init.py:init():883] backend started and connected
+2026-04-11 22:13:30,304 INFO    MainThread:26300 [wandb_init.py:init():956] updated telemetry
+2026-04-11 22:13:30,343 INFO    MainThread:26300 [wandb_init.py:init():980] communicating run to backend with 90.0 second timeout
+2026-04-11 22:13:31,353 INFO    MainThread:26300 [wandb_init.py:init():1032] starting run threads in backend
+2026-04-11 22:13:31,524 INFO    MainThread:26300 [wandb_run.py:_console_start():2453] atexit reg
+2026-04-11 22:13:31,524 INFO    MainThread:26300 [wandb_run.py:_redirect():2301] redirect: wrap_raw
+2026-04-11 22:13:31,524 INFO    MainThread:26300 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2026-04-11 22:13:31,524 INFO    MainThread:26300 [wandb_run.py:_redirect():2393] Redirects installed.
+2026-04-11 22:13:31,527 INFO    MainThread:26300 [wandb_init.py:init():1078] run started, returning control to user process
+2026-04-11 22:15:23,611 INFO    MainThread:26300 [wandb_run.py:_finish():2219] finishing run ns26z118-indian-institute-of-technology-madras/da6401-a2/gjypj6st
+2026-04-11 22:15:23,612 INFO    MainThread:26300 [wandb_run.py:_atexit_cleanup():2418] got exitcode: 0
+2026-04-11 22:15:23,612 INFO    MainThread:26300 [wandb_run.py:_restore():2400] restore
+2026-04-11 22:15:23,612 INFO    MainThread:26300 [wandb_run.py:_restore():2406] restore done
+2026-04-11 22:15:27,059 INFO    MainThread:26300 [wandb_run.py:_footer_history_summary_info():4000] rendering history
+2026-04-11 22:15:27,059 INFO    MainThread:26300 [wandb_run.py:_footer_history_summary_info():4032] rendering summary
+2026-04-11 22:15:27,059 INFO    MainThread:26300 [wandb_run.py:_footer_sync_info():3961] logging synced files

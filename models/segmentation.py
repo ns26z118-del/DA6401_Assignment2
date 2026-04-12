@@ -1,37 +1,4 @@
-"""U-Net style semantic segmentation using VGG11 as the encoder.
-
-Architecture:
-    Encoder (contracting path) — VGG11Encoder blocks 1-5
-    Decoder (expansive path)   — symmetric upsampling with skip connections
-
-Upsampling:
-    ConvTranspose2d (learnable transposed convolution) is used exclusively
-    for upsampling. Bilinear interpolation and unpooling are not used, as
-    required by the assignment.
-
-Skip connections:
-    At each decoder stage, the upsampled feature map is CONCATENATED with
-    the corresponding encoder feature map (same spatial size) along the
-    channel dimension before the next conv block. This preserves fine-grained
-    spatial details lost during downsampling.
-
-Loss function justification:
-    We use CrossEntropyLoss for the 3-class trimap segmentation (pet=0,
-    background=1, border=2). CE loss is appropriate because:
-    1. The trimap has 3 mutually exclusive classes per pixel.
-    2. CE with class weights handles the class imbalance between foreground
-       and background pixels.
-    Alternative: Dice loss directly optimises the Dice metric, but CE+Dice
-    combined tends to be most stable in practice.
-
-Decoder channel sizes (symmetric to encoder):
-    Block 5 bottleneck: 512 ch, 7×7
-    Up1: ConvTranspose(512→512) + cat(s4=512) → Conv(1024→512), 14×14
-    Up2: ConvTranspose(512→256) + cat(s3=256) → Conv(512→256),  28×28
-    Up3: ConvTranspose(256→128) + cat(s2=128) → Conv(256→128),  56×56
-    Up4: ConvTranspose(128→64)  + cat(s1=64)  → Conv(128→64),  112×112
-    Up5: ConvTranspose(64→32)                 → Conv(32→num_classes), 224×224
-"""
+ 
 
 import torch
 import torch.nn as nn
@@ -138,35 +105,4 @@ class VGG11UNet(nn.Module):
         z = self.dec5(z)                             # [B, 32, 224, 224]
 
         return self.head(z)                          # [B, num_classes, 224, 224]
-
-# """Segmentation model
-# """
-
-# import torch
-# import torch.nn as nn
-
-# class VGG11UNet(nn.Module):
-#     """U-Net style segmentation network.
-#     """
-
-#     def __init__(self, num_classes: int = 3, in_channels: int = 3, dropout_p: float = 0.5):
-#         """
-#         Initialize the VGG11UNet model.
-
-#         Args:
-#             num_classes: Number of output classes.
-#             in_channels: Number of input channels.
-#             dropout_p: Dropout probability for the segmentation head.
-#         """
-#         pass
-
-#     def forward(self, x: torch.Tensor) -> torch.Tensor:
-#         """Forward pass for segmentation model.
-#         Args:
-#             x: Input tensor of shape [B, in_channels, H, W].
-
-#         Returns:
-#             Segmentation logits [B, num_classes, H, W].
-#         """
-#         # TODO: Implement forward pass.
-#         raise NotImplementedError("Implement VGG11UNet.forward")
+ 
